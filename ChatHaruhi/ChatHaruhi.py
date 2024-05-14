@@ -451,8 +451,6 @@ class ChatHaruhi:
         # add story
         query = self.get_query_string(text, role)
         self.add_story( query )
-        print("QUERY")
-        print(query)
         # add history
         self.add_history()
 
@@ -497,6 +495,7 @@ class ChatHaruhi:
                 sum_story_token += story_token
                 story_string += story + self.dialogue_divide_token
 
+        print(story_string)
         self.llm.user_message(story_string)
         
     def add_history(self):
