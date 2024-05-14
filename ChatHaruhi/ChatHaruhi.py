@@ -240,7 +240,7 @@ class ChatHaruhi:
         texts = []
         vecs = []
         for data in datas:
-            print(embed_name)
+            print('aaa' + embed_name)
             print(data[embed_name])
             if data[embed_name] == 'system_prompt':
                 system_prompt = get_text_from_data( data )
