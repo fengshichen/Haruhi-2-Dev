@@ -240,8 +240,6 @@ class ChatHaruhi:
         texts = []
         vecs = []
         for data in datas:
-            print('aaa' + embed_name)
-            print(data[embed_name])
             if data[embed_name] == 'system_prompt':
                 system_prompt = get_text_from_data( data )
             elif data[embed_name] == 'config':
@@ -452,6 +450,8 @@ class ChatHaruhi:
 
         # add story
         query = self.get_query_string(text, role)
+        print("QUERY")
+        print(query)
         self.add_story( query )
 
         # add history
