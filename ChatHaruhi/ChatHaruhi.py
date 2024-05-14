@@ -197,7 +197,6 @@ class ChatHaruhi:
                 print('warning! unkown embedding name ', embedding ,' while loading role')
                 embed_name = 'luotuo_openai'
 
-            print(datas)
             texts, vecs, self.system_prompt = self.extract_text_vec_from_datas(datas, embed_name)
 
             self.build_story_db_from_vec( texts, vecs )
@@ -241,6 +240,7 @@ class ChatHaruhi:
         texts = []
         vecs = []
         for data in datas:
+            print(data)
             if data[embed_name] == 'system_prompt':
                 system_prompt = get_text_from_data( data )
             elif data[embed_name] == 'config':
