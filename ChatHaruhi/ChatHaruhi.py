@@ -450,10 +450,9 @@ class ChatHaruhi:
 
         # add story
         query = self.get_query_string(text, role)
+        self.add_story( query )
         print("QUERY")
         print(query)
-        self.add_story( query )
-
         # add history
         self.add_history()
 
